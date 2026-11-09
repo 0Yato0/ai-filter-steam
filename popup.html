@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Steam AI Filter</h1>
+
+  <label class="row"><span>Włącz rozszerzenie</span>
+    <input type="checkbox" id="enabled"><i class="sw"></i></label>
+  <label class="row"><span>Oznaczaj gry AI na żółto</span>
+    <input type="checkbox" id="highlight"><i class="sw"></i></label>
+  <label class="row"><span>Ukrywaj gry AI</span>
+    <input type="checkbox" id="hide"><i class="sw"></i></label>
+
+  <label class="row"><span>Oznaczaj gry AI w mojej bibliotece</span>
+    <input type="checkbox" id="libMark"><i class="sw"></i></label>
+
+  <button id="openLib">Otwórz moją bibliotekę</button>
+
+  <div class="stats" id="stats">…</div>
+  <div class="stats small" id="cacheInfo"></div>
+
+  <button id="clear">Wyczyść pamięć podręczną</button>
+  <p class="note">Gry są sprawdzane w tle na podstawie sekcji „AI Generated Content Disclosure" na stronie gry.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

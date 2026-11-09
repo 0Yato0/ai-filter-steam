@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "AI Game Filter for Steam Store",
+  "version": "1.2.0",
+  "description": "Highlights in yellow or hides games with an AI-generated content disclosure in the Steam store, and marks them in your Steam library.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://store.steampowered.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://steamcommunity.com/profiles/*/games*",
+        "https://steamcommunity.com/id/*/games*"
+      ],
+      "js": [
+        "community.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "AI Game Filter for Steam Store",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
